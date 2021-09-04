@@ -1,0 +1,15 @@
+# compiled output
+/dist
+/server/node_modules
+/web/node_modules
+
+# Tests
+/server/coverage
+/web/coverage
+
+# IDEs and editors
+/.vscode
+
+# IDE - VSCode
+.vscode/*
+!.vscode/launch.json
