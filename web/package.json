@@ -14,9 +14,10 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "start": "set PORT=8080 & react-scripts start",
+    "start": "export PORT=8080 || set PORT=8080 && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --watchAll=false",
+    "test:watch": "react-scripts test --watchAll",
     "eject": "react-scripts eject"
   },
   "author": "Jaime Sanchez",
