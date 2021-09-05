@@ -66,6 +66,15 @@ describe("Supply Controller", () => {
     expect(_supplyController.salesQueue.length).toBe(1);
   });
 
+  it("should reboot the stock", () => {
+    const _supplyController = new SupplyController();
+    _supplyController.addSaleToQueue(sales[0]);
+    _supplyController.addSaleToQueue(sales[1]);
+    expect(_supplyController.salesQueue.length).toBe(2);
+    _supplyController.rebootStock();
+    expect(_supplyController.salesQueue.length).toBe(0);
+  });
+
   it("should return an ordered list with date attribute", () => {
     const _supplyController = new SupplyController();
     const orderedList = _supplyController.orderListWithDateAttr(

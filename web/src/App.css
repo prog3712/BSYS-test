@@ -1,0 +1,32 @@
+.App {
+  display: flex;
+  min-width: 100%;
+  flex: 1;
+  flex-direction: column;
+  text-align: center;
+}
+
+.App .tables {
+  display: inherit;
+  justify-content: space-around;
+}
+
+.App .tables .tableWrapper {
+  width: 50%;
+  display: inherit;
+  justify-content: center;
+}
+
+.App .allocateDiv {
+  width: 100%;
+  display: inherit;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+}
+
+.App .allocateDiv .tableWrapper {
+  width: 100%;
+  display: inherit;
+  justify-content: center;
+}

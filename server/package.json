@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js",
+    "start:dev": "nodemon index.js",
     "test": "jest --coverage"
   },
-  "author": "",
+  "author": "Jaime Sanchez",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",

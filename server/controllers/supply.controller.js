@@ -1,8 +1,8 @@
 class SupplyController {
   constructor() {
+    this.instance;
     this.allocatedSales = [];
     this.notAllocatedSales = [];
-    this.instance;
     this.salesQueue = [];
     this.stock = 0;
   }
@@ -32,6 +32,13 @@ class SupplyController {
 
   getCurrentStock() {
     return this.stock;
+  }
+
+  rebootStock() {
+    this.allocatedSales = [];
+    this.notAllocatedSales = [];
+    this.salesQueue = [];
+    this.stock = 0;
   }
 
   orderListWithDateAttr(list, dateColumn) {
@@ -68,6 +75,8 @@ class SupplyController {
   }
 
   allocate(salesOrders = [], purchaseOrders = []) {
+    this.rebootStock();
+
     const purchases = this.orderListWithDateAttr(purchaseOrders, "receiving");
 
     this.orderListWithDateAttr(salesOrders, "created").map(this.addSaleToQueue.bind(this));

@@ -1,7 +1,9 @@
 # compiled output
 /dist
+/node_modules
 /server/node_modules
 /web/node_modules
+/web/public
 
 # Tests
 /server/coverage

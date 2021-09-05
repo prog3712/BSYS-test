@@ -1,0 +1,27 @@
+{
+  "name": "bsys_project",
+  "version": "1.0.0",
+  "description": "bsys_project",
+  "main": "/server/index.js",
+  "scripts": {
+    "start": "concurrently \"npm run start:api\" \"npm run start:web\"",
+    "install:all": "concurrently \"npm install\" \"npm run install:api\" \"npm run install:web\"",
+    "install:api": "cd ./server && npm install",
+    "install:web": "cd ./web && npm install",
+    "start:api": "cd ./server && npm start",
+    "start:web": "cd ./web && npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prog3712/BSYS-test.git"
+  },
+  "author": "Jaime Sanchez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/prog3712/BSYS-test/issues"
+  },
+  "homepage": "https://github.com/prog3712/BSYS-test#readme",
+  "dependencies": {
+    "concurrently": "^6.2.1"
+  }
+}
