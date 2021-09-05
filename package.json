@@ -4,12 +4,15 @@
   "description": "bsys_project",
   "main": "/server/index.js",
   "scripts": {
-    "start": "concurrently \"npm run start:api\" \"npm run start:web\"",
     "install:all": "concurrently \"npm install\" \"npm run install:api\" \"npm run install:web\"",
     "install:api": "cd ./server && npm install",
     "install:web": "cd ./web && npm install",
+    "start:all": "concurrently \"npm run start:api\" \"npm run start:web\"",
     "start:api": "cd ./server && npm start",
-    "start:web": "cd ./web && npm start"
+    "start:web": "cd ./web && npm start",
+    "test:all": "concurrently \"npm run test:api\" \"npm run test:web\"",
+    "test:api": "cd ./server && npm test",
+    "test:web": "cd ./web && npm test"
   },
   "repository": {
     "type": "git",
